@@ -64,5 +64,11 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aihunters is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.hiive.com/securities/aihunters-stock
+AIHunters was an AI and computer-vision company that built Cognitive Mill, a cognitive computing cloud platform for Media and Entertainment automation. Cognitive Mill analyzed long-form video with human-like scene understanding and shipped as branded services: CognitiveReelz (automated sports highlights and movie summarization), CognitiveSkip (end-credits detection for EPG correction), CognitiveCrop (cropping to portrait/mobile aspect), CognitiveCast (celebrity face-recognition metadata), CognitiveNude (nudity filtering) and CognitiveShapes (broadcast graphics detection). It exposed a public REST API at api.cognitivemill.com behind a Swagger UI. The company later became GrayPaw and pivoted to industrial cognitive vision; in February 2026 Linque acquired the Cognitive Vision AI IP. Both aihunters.com and cognitivemill.com now redirect to linque.com and the Cognitive Mill API host no longer resolves.
+
+**Status: retired.** No live API surface remains. See `lifecycle/aihunters-lifecycle.yml` for the
+retirement record and `well-known/aihunters-well-known.yml` for the discovery probe.
+
+- Website (redirects to the acquirer): https://aihunters.com/
+- GitHub organization: https://github.com/AIHunters
+- LinkedIn: https://www.linkedin.com/company/aihunters

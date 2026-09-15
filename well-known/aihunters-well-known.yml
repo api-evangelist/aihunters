@@ -1,0 +1,73 @@
+generated: '2026-09-14'
+method: probed
+source: https://aihunters.com/.well-known/
+note: >-
+  No document was found on any host. Every AIHunters-controlled host answers EVERY path with a
+  blanket HTTP 301 to https://linque.com/ — the site of Linque Industrial Intelligence, which
+  acquired the Cognitive Vision AI IP in February 2026 — including a negative-control path that
+  cannot exist. The redirect is not path-preserving, so nothing under /.well-known/ is served at
+  all. The API host the company used to publish, api.cognitivemill.com, has no DNS A record.
+  No WellKnown or SecurityTxt pointer is emitted: a recorded absence, not a surface.
+hit_count: 0
+path_echo_control: passed
+hosts:
+- host: https://aihunters.com
+  note: 301 to https://linque.com/ on every path (blanket, non-path-preserving)
+  documents:
+  - {path: /.well-known/security.txt, status: 301}
+  - {path: /.well-known/openid-configuration, status: 301}
+  - {path: /.well-known/oauth-authorization-server, status: 301}
+  - {path: /.well-known/oauth-protected-resource, status: 301}
+  - {path: /.well-known/api-catalog, status: 301}
+  - {path: /.well-known/ai-plugin.json, status: 301}
+  - {path: /.well-known/agent-card.json, status: 301}
+  - {path: /.well-known/agent.json, status: 301}
+  - {path: /.well-known/apis.json, status: 301}
+  - {path: /apis.json, status: 301}
+  - {path: /apis.yml, status: 301}
+  - {path: /openapi.json, status: 301}
+  - {path: /swagger.json, status: 301}
+  - {path: /llms.txt, status: 301}
+  - {path: /.well-known/aihunters-negative-control-7f3ab91c.json, status: 301, control: true}
+- host: https://www.aihunters.com
+  note: 301 to https://linque.com/ on every path
+  documents:
+  - {path: /.well-known/security.txt, status: 301}
+  - {path: /.well-known/openid-configuration, status: 301}
+  - {path: /.well-known/oauth-authorization-server, status: 301}
+  - {path: /.well-known/oauth-protected-resource, status: 301}
+  - {path: /.well-known/api-catalog, status: 301}
+  - {path: /.well-known/ai-plugin.json, status: 301}
+  - {path: /.well-known/agent-card.json, status: 301}
+  - {path: /.well-known/agent.json, status: 301}
+  - {path: /.well-known/apis.json, status: 301}
+  - {path: /apis.json, status: 301}
+  - {path: /apis.yml, status: 301}
+  - {path: /openapi.json, status: 301}
+  - {path: /swagger.json, status: 301}
+  - {path: /llms.txt, status: 301}
+  - {path: /.well-known/aihunters-negative-control-7f3ab91c.json, status: 301, control: true}
+- host: https://cognitivemill.com
+  note: Former Cognitive Mill product site; 301 to https://linque.com/ on every path
+  documents:
+  - {path: /.well-known/security.txt, status: 301}
+  - {path: /.well-known/openid-configuration, status: 301}
+  - {path: /.well-known/oauth-authorization-server, status: 301}
+  - {path: /.well-known/oauth-protected-resource, status: 301}
+  - {path: /.well-known/api-catalog, status: 301}
+  - {path: /.well-known/ai-plugin.json, status: 301}
+  - {path: /.well-known/agent-card.json, status: 301}
+  - {path: /.well-known/agent.json, status: 301}
+  - {path: /.well-known/apis.json, status: 301}
+  - {path: /apis.json, status: 301}
+  - {path: /apis.yml, status: 301}
+  - {path: /openapi.json, status: 301}
+  - {path: /swagger.json, status: 301}
+  - {path: /llms.txt, status: 301}
+  - {path: /.well-known/aihunters-negative-control-7f3ab91c.json, status: 301, control: true}
+- host: https://api.cognitivemill.com
+  note: >-
+    Former Cognitive Mill REST API host. No DNS A record as of 2026-09-14 (NXDOMAIN); no probe
+    could be issued. A Swagger UI shell was archived here on 2022-12-06 but the spec document it
+    loaded was never captured, so no OpenAPI is recoverable.
+  documents: []

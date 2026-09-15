@@ -1,17 +1,34 @@
 aid: aihunters
-name: Aihunters
-description: 'Aihunters is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: AIHunters
+description: >-
+  AIHunters was an AI and computer-vision company that built Cognitive Mill, a cognitive computing
+  cloud platform for Media and Entertainment automation. Cognitive Mill analyzed long-form video with
+  human-like scene understanding and shipped as branded services: CognitiveReelz (automated sports
+  highlights and movie summarization), CognitiveSkip (end-credits detection for EPG correction),
+  CognitiveCrop (cropping to portrait/mobile aspect), CognitiveCast (celebrity face-recognition
+  metadata), CognitiveNude (nudity filtering) and CognitiveShapes (broadcast graphics detection). It
+  exposed a public REST API at api.cognitivemill.com behind a Swagger UI. The company later became
+  GrayPaw and pivoted to industrial cognitive vision; in February 2026 Linque acquired the Cognitive
+  Vision AI IP. Both aihunters.com and cognitivemill.com now redirect to linque.com and the Cognitive
+  Mill API host no longer resolves.
 url: https://raw.githubusercontent.com/api-evangelist/aihunters/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-secondary-market:
+  venue: Hiive
+  url: https://www.hiive.com/securities/aihunters-stock
 specificationVersion: '0.20'
 created: '2026-09-14'
 modified: '2026-09-14'
 tags:
-- Company
+- Artificial Intelligence
+- Computer Vision
+- Video
+- Media
+- Entertainment
+- Machine Learning
+- Content Automation
+- Video Analysis
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +37,42 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.hiive.com/securities/aihunters-stock
+  url: https://aihunters.com/
+  x-note: >-
+    The company's domain of record. It now issues a blanket HTTP 301 to https://linque.com/,
+    the site of the company that acquired its Cognitive Vision AI IP in February 2026.
+- type: GitHubOrganization
+  url: https://github.com/AIHunters
+  x-note: First-party org (blog cognitivemill.com, oss@aihunters.com); 0 public repos, last updated 2022-06-06.
+- type: LinkedIn
+  url: https://www.linkedin.com/company/aihunters
+- type: Lifecycle
+  url: lifecycle/aihunters-lifecycle.yml
+x-enrichment:
+  date: '2026-09-14'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    AIHunters no longer operates: it rebranded to GrayPaw, Linque acquired its Cognitive Vision AI
+    IP on 2026-02-15, and both aihunters.com and cognitivemill.com now answer every path — including
+    a negative-control path that cannot exist — with a blanket HTTP 301 to the acquirer's site at
+    linque.com, while the Cognitive Mill REST API host api.cognitivemill.com has no DNS record at
+    all and the only archived capture of its Swagger UI never included the spec document it loaded.
+  evidence:
+  - url: https://aihunters.com/.well-known/security.txt
+    status: 301
+  - url: https://cognitivemill.com/openapi.json
+    status: 301
+  - url: https://aihunters.com/.well-known/aihunters-negative-control-7f3ab91c.json
+    status: 301
+  - url: https://api.cognitivemill.com/swagger/index.html
+    status: 0
+  - url: https://github.com/AIHunters
+    status: 200
+  - url: https://www.linque.com/
+    status: 200
+  checked: '2026-09-14'

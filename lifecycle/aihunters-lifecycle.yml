@@ -1,0 +1,62 @@
+generated: '2026-09-14'
+method: probed
+source: https://aihunters.com/
+summary: >-
+  The AIHunters API surface is retired. Cognitive Mill's public REST API and its per-product
+  documentation were live through at least 2022; the company then rebranded to GrayPaw and pivoted
+  from media to industrial cognitive vision, and in February 2026 Linque acquired the Cognitive
+  Vision AI IP. Both company domains now issue a blanket redirect to the acquirer's site and the
+  API host no longer resolves. No versioning policy, deprecation policy, sunset headers, SLA or
+  status page was ever published, and none exists now.
+status: retired
+versioning:
+  scheme: unknown
+  current: null
+  docs: null
+  note: No versioning policy was published on the Cognitive Mill documentation site.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    No deprecation policy, no RFC 8594 Sunset/Deprecation header support, and no end-of-life
+    notice was published. The API simply stopped resolving.
+sla: {url: null, uptime_target: null}
+status_page: null
+retirement:
+  api_host: api.cognitivemill.com
+  api_host_dns: NXDOMAIN
+  docs_host: cognitivemill.com
+  last_known_api_evidence:
+    url: https://api.cognitivemill.com/swagger/index.html
+    kind: Swagger UI shell
+    observed: '2022-12-06'
+    note: >-
+      Archived capture only; the spec document the UI loaded was never captured, so no OpenAPI or
+      Swagger definition is recoverable. Nothing was saved to openapi/ — an unrecoverable contract
+      is recorded as absent, never reconstructed.
+  last_known_docs_evidence:
+    url: https://cognitivemill.com/docs/api/
+    observed: '2022-01-28'
+    products_documented:
+    - CognitiveReelz Sports
+    - CognitiveReelz Movies
+    - CognitiveSkip
+    - CognitiveShapes
+    - CognitiveCrop
+    - CognitiveCast
+    - CognitiveNude
+  successor:
+    company: Linque Industrial Intelligence
+    url: https://www.linque.com/
+    event: Acquisition of the GrayPaw Cognitive Vision AI intellectual property
+    date: '2026-02-15'
+    note: >-
+      Linque is a separate company (Royersford, PA) that now owns the IP. Nothing published on
+      linque.com is attributed to AIHunters in this profile, and no Linque artifact was harvested
+      into this repository.
+deprecated_operations: []
+x-evidence:
+- {url: 'https://aihunters.com/', status: 301, note: 'redirects to https://linque.com/'}
+- {url: 'https://cognitivemill.com/', status: 301, note: 'redirects to https://linque.com/'}
+- {url: 'https://api.cognitivemill.com/swagger/index.html', status: 0, note: 'DNS NXDOMAIN'}
+- {url: 'https://github.com/AIHunters', status: 200, note: 'first-party GitHub org, 0 public repos, last updated 2022-06-06'}
